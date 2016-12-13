@@ -1,0 +1,9 @@
+The gitk interface consists on 5 windows. The first contains a
+visualization of the tree and its branches. Each branch has a very brief
+description of what the commit does. The window to the right gives
+author of the commit, along with a contact email. To the right of this
+window contains the date and time of the commit. Below the first window
+is a window that contains previews of the affected files. It is in the format
+of the patch and diff output files. On the bottom right there is a toggle
+window. It lets you select files and directories either related to the
+patch or to the entire tree. 

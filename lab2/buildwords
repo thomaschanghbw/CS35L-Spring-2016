@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sed '/<!DOC/,\/font/d' | sed '/<\/table>/,/\/html>/d' | tr -d '\n' | tr '[:upper:]' '[:lower:]' | sed 's/<\/tr>[^<]*<tr>[^<]*<td>[^<]*<\/td>/\n/g' | sed -r  's/<\/tr>[^<]*<tr>[^<]*<td>.*(<\/small>|<\/font>)/\n/g' | sed 's/<[^>]*>//g' | tr "\`" "\'" | tr -s '[\,\ ]' '\n' | grep -vE "[^pk\'mnwlhaeiou]" | sort -u
